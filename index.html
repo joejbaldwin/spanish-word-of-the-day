@@ -8,7 +8,26 @@
 </head>
 <body>
   <main class="card">
-    <h1>Spanish word of the day</h1>
+    <h1>Spanish Word of the Day</h1>
+
+    <div class="filter-options">
+      <label class="checkbox-label">
+        <input type="checkbox" id="nounsCheckbox" checked>
+        <span>Nouns</span>
+      </label>
+      <label class="checkbox-label">
+        <input type="checkbox" id="verbsCheckbox" checked>
+        <span>Verbs</span>
+      </label>
+      <label class="checkbox-label">
+        <input type="checkbox" id="adjectivesCheckbox" checked>
+        <span>Adjectives</span>
+      </label>
+      <label class="checkbox-label">
+        <input type="checkbox" id="adverbsCheckbox" checked>
+        <span>Adverbs</span>
+      </label>
+    </div>
 
     <div class="word">
       <div class="spanish" id="spanish">—</div>
@@ -16,6 +35,8 @@
     </div>
 
     <p class="meaning" id="meaning">—</p>
+
+    <button id="reroll" class="reroll-btn">🔄 Get Random Word</button>
 
     <div class="meta">
       <span id="date"></span>

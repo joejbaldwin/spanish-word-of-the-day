@@ -1,11 +1,7 @@
-const WORDS = [
-  { spanish: "ser", english: "to be", meaning: "Used for identity and relatively permanent characteristics." },
-  { spanish: "estar", english: "to be", meaning: "Used for states/feelings and locations." },
-  { spanish: "aunque", english: "although", meaning: "Introduces a contrast or concession." },
-  { spanish: "entonces", english: "then/so", meaning: "Used to indicate consequence or what happens next." },
-  { spanish: "todavía", english: "still/yet", meaning: "Indicates something continues or has not happened yet." },
-  { spanish: "ojalá", english: "hopefully/if only", meaning: "Expresses a wish (often followed by subjunctive)." },
-];
+let NOUNS = [];
+let VERBS = [];
+let ADJECTIVES = [];
+let ADVERBS = [];
 
 function dayNumberUTC(d = new Date()) {
   // Use UTC so the result is stable regardless of local time-zone changes.
@@ -26,11 +22,92 @@ function wordOfDay(words, d = new Date()) {
   return words[idx];
 }
 
-const w = wordOfDay(WORDS);
+function displayWord(word) {
+  document.getElementById("spanish").textContent = word.spanish;
+  document.getElementById("english").textContent = word.english;
+  document.getElementById("meaning").textContent = word.meaning;
+}
 
-document.getElementById("spanish").textContent = w.spanish;
-document.getElementById("english").textContent = w.english;
-document.getElementById("meaning").textContent = w.meaning;
+function getFilteredWords() {
+  const nounsChecked = document.getElementById("nounsCheckbox").checked;
+  const verbsChecked = document.getElementById("verbsCheckbox").checked;
+  const adjectivesChecked = document.getElementById("adjectivesCheckbox").checked;
+  const adverbsChecked = document.getElementById("adverbsCheckbox").checked;
+  
+  let filteredWords = [];
+  
+  if (nounsChecked) {
+    filteredWords = filteredWords.concat(NOUNS);
+  }
+  
+  if (verbsChecked) {
+    filteredWords = filteredWords.concat(VERBS);
+  }
+  
+  if (adjectivesChecked) {
+    filteredWords = filteredWords.concat(ADJECTIVES);
+  }
+  
+  if (adverbsChecked) {
+    filteredWords = filteredWords.concat(ADVERBS);
+  }
+  
+  return filteredWords.length > 0 ? filteredWords : [];
+}
+
+function showRandomWord() {
+  const filteredWords = getFilteredWords();
+  const randomIdx = Math.floor(Math.random() * filteredWords.length);
+  displayWord(filteredWords[randomIdx]);
+}
+
+function handleCheckboxChange(event) {
+  const nounsCheckbox = document.getElementById("nounsCheckbox");
+  const verbsCheckbox = document.getElementById("verbsCheckbox");
+  const adjectivesCheckbox = document.getElementById("adjectivesCheckbox");
+  const adverbsCheckbox = document.getElementById("adverbsCheckbox");
+  
+  // Prevent unchecking if it's the last checked box
+  if (!nounsCheckbox.checked && !verbsCheckbox.checked && 
+      !adjectivesCheckbox.checked && !adverbsCheckbox.checked) {
+    event.target.checked = true;
+    return;
+  }
+  
+  showRandomWord();
+}
+
+// Fetch all word files
+Promise.all([
+  fetch("data/nouns.json").then(r => r.json()),
+  fetch("data/verbs.json").then(r => r.json()),
+  fetch("data/adjectives.json").then(r => r.json()),
+  fetch("data/adverbs.json").then(r => r.json())
+])
+  .then(([nouns, verbs, adjectives, adverbs]) => {
+    NOUNS = nouns;
+    VERBS = verbs;
+    ADJECTIVES = adjectives;
+    ADVERBS = adverbs;
+    
+    // Display initial word
+    const filteredWords = getFilteredWords();
+    const w = wordOfDay(filteredWords);
+    displayWord(w);
+    
+    // Reroll button functionality
+    document.getElementById("reroll").addEventListener("click", showRandomWord);
+    
+    // Checkbox change listeners with validation
+    document.getElementById("nounsCheckbox").addEventListener("change", handleCheckboxChange);
+    document.getElementById("verbsCheckbox").addEventListener("change", handleCheckboxChange);
+    document.getElementById("adjectivesCheckbox").addEventListener("change", handleCheckboxChange);
+    document.getElementById("adverbsCheckbox").addEventListener("change", handleCheckboxChange);
+  })
+  .catch(error => {
+    console.error("Error loading words:", error);
+    document.getElementById("spanish").textContent = "Error loading words";
+  });
 
 const now = new Date();
 document.getElementById("date").textContent =

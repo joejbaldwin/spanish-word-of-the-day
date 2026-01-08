@@ -1,0 +1,102 @@
+[
+  {
+    "spanish": "muy",
+    "english": "very",
+    "meaning": "Intensifies adjectives or other adverbs."
+  },
+  {
+    "spanish": "bien",
+    "english": "well",
+    "meaning": "In a good or proper manner."
+  },
+  {
+    "spanish": "mal",
+    "english": "badly/poorly",
+    "meaning": "In a bad or improper manner."
+  },
+  {
+    "spanish": "siempre",
+    "english": "always",
+    "meaning": "At all times; on every occasion."
+  },
+  {
+    "spanish": "nunca",
+    "english": "never",
+    "meaning": "At no time; not ever."
+  },
+  {
+    "spanish": "ya",
+    "english": "already/now",
+    "meaning": "Before or by now; can also mean 'right now'."
+  },
+  {
+    "spanish": "ahora",
+    "english": "now",
+    "meaning": "At the present time or moment."
+  },
+  {
+    "spanish": "después",
+    "english": "after/afterwards",
+    "meaning": "At a later time; following something."
+  },
+  {
+    "spanish": "antes",
+    "english": "before",
+    "meaning": "At an earlier time; prior to something."
+  },
+  {
+    "spanish": "luego",
+    "english": "then/later",
+    "meaning": "Afterwards; at a subsequent time."
+  },
+  {
+    "spanish": "aquí",
+    "english": "here",
+    "meaning": "In or at this place."
+  },
+  {
+    "spanish": "allí",
+    "english": "there",
+    "meaning": "In or at that place (more distant)."
+  },
+  {
+    "spanish": "ahí",
+    "english": "there",
+    "meaning": "In or at that place (closer than 'allí')."
+  },
+  {
+    "spanish": "lejos",
+    "english": "far",
+    "meaning": "At a great distance."
+  },
+  {
+    "spanish": "cerca",
+    "english": "near/close",
+    "meaning": "At a short distance."
+  },
+  {
+    "spanish": "rápidamente",
+    "english": "quickly/rapidly",
+    "meaning": "At high speed; in a fast manner."
+  },
+  {
+    "spanish": "lentamente",
+    "english": "slowly",
+    "meaning": "At a slow pace."
+  },
+  {
+    "spanish": "solamente",
+    "english": "only",
+    "meaning": "And no one or nothing else; exclusively."
+  },
+  {
+    "spanish": "solo",
+    "english": "only/just",
+    "meaning": "Only; exclusively (can also be an adjective meaning alone)."
+  },
+  {
+    "spanish": "también",
+    "english": "also/too",
+    "meaning": "In addition; as well."
+  }
+]

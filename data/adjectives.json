@@ -1,0 +1,102 @@
+[
+  {
+    "spanish": "bueno",
+    "english": "good",
+    "meaning": "Describes something positive; changes to 'buen' before masculine singular nouns."
+  },
+  {
+    "spanish": "malo",
+    "english": "bad",
+    "meaning": "Describes something negative; changes to 'mal' before masculine singular nouns."
+  },
+  {
+    "spanish": "grande",
+    "english": "big/great",
+    "meaning": "Can mean size or importance; becomes 'gran' before singular nouns."
+  },
+  {
+    "spanish": "pequeño",
+    "english": "small",
+    "meaning": "Describes small size or young age."
+  },
+  {
+    "spanish": "nuevo",
+    "english": "new",
+    "meaning": "Recently made or different from before."
+  },
+  {
+    "spanish": "viejo",
+    "english": "old",
+    "meaning": "Aged or from the past."
+  },
+  {
+    "spanish": "joven",
+    "english": "young",
+    "meaning": "Of a young age; same form for masculine and feminine."
+  },
+  {
+    "spanish": "feliz",
+    "english": "happy",
+    "meaning": "Feeling or showing happiness; same form for masculine and feminine."
+  },
+  {
+    "spanish": "triste",
+    "english": "sad",
+    "meaning": "Feeling sorrow or unhappiness."
+  },
+  {
+    "spanish": "fácil",
+    "english": "easy",
+    "meaning": "Not difficult; same form for masculine and feminine."
+  },
+  {
+    "spanish": "difícil",
+    "english": "difficult",
+    "meaning": "Hard to do or understand."
+  },
+  {
+    "spanish": "importante",
+    "english": "important",
+    "meaning": "Of great significance or value."
+  },
+  {
+    "spanish": "interesante",
+    "english": "interesting",
+    "meaning": "Arousing curiosity or attention."
+  },
+  {
+    "spanish": "bonito",
+    "english": "pretty/nice",
+    "meaning": "Attractive or pleasant to look at."
+  },
+  {
+    "spanish": "hermoso",
+    "english": "beautiful",
+    "meaning": "Very attractive; pleasing to the senses."
+  },
+  {
+    "spanish": "rápido",
+    "english": "fast/quick",
+    "meaning": "Moving or happening at high speed."
+  },
+  {
+    "spanish": "lento",
+    "english": "slow",
+    "meaning": "Moving or happening at low speed."
+  },
+  {
+    "spanish": "caliente",
+    "english": "hot",
+    "meaning": "Having high temperature."
+  },
+  {
+    "spanish": "frío",
+    "english": "cold",
+    "meaning": "Having low temperature."
+  },
+  {
+    "spanish": "largo",
+    "english": "long",
+    "meaning": "Measuring great distance or time."
+  }
+]
